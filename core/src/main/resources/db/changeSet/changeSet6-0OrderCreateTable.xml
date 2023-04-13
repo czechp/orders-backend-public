@@ -1,0 +1,32 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="6-0" author="czechp">
+        <createTable tableName="orders">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="version" type="bigint" defaultValue="0"/>
+            <column name="created_at" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="created_by" type="varchar(50)" defaultValue="GENERATED" />
+            <column name="modified_by" type="varchar(50)" defaultValue="GENERATED" />
+            <column name="uuid" type="varchar(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="execution_date" type="TIMESTAMP" />
+            <column name="closing_date" type="TIMESTAMP" />
+
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(50)" />
+            <column name="order_state" type="varchar(20)" defaultValue="PREPARATION" />
+            <column name="internal_id" type="varchar(100)" />
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

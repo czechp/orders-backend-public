@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="4-1" author="czechp" context="development">
+        <insert tableName="producers">
+            <column name="name" value="First producer" />
+            <column name="uuid" value="18c7560c-1114-4751-a723-7a5e12b94f71" />
+        </insert>
+        <insert tableName="producers">
+            <column name="name" value="Second producer" />
+            <column name="uuid" value="226f66a6-0d85-4afc-b6b0-29ea998afa99" />
+        </insert>
+        <insert tableName="producers">
+            <column name="name" value="Third producer" />
+            <column name="uuid" value="2fe75537-dc8c-4bbb-ac7e-3fb67f2a7972" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>

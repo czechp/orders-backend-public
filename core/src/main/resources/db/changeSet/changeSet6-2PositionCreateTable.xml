@@ -1,0 +1,40 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="6-2" author="czechp">
+        <createTable tableName="positions">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="version" type="bigint" defaultValue="0"/>
+            <column name="created_at" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="updated_at" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="created_by" type="varchar(50)" defaultValue="GENERATED" />
+            <column name="modified_by" type="varchar(50)" defaultValue="GENERATED" />
+            <column name="uuid" type="varchar(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="order_id" type="bigint">
+                <constraints foreignKeyName="fk_order" references="orders(id)"/>
+            </column>
+            <column name="element_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_elements" references="elements(id)"/>
+            </column>
+            <column name="quantity" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="position_unit" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="position_status" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ordering_date" type="timestamp" />
+            <column name="delivering_date" type="timestamp" />
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

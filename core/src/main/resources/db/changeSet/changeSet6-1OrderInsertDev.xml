@@ -1,0 +1,32 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="6-1" author="czechp" context="development">
+        <insert tableName="orders">
+            <column name="uuid" value="64ad9c06-d749-4b8d-ae30-0cd354fdda94"/>
+            <column name="order_state" value="PREPARATION" />
+            <column name="name" value="First order" />
+            <column name="description" value="First description" />
+            <column name="created_by" value="user" />
+            <column name="internal_id" value="First internal id"/>
+        </insert>
+        <insert tableName="orders">
+            <column name="uuid" value="5c72ec62-b9fd-4f88-9fc1-b788daf4a993"/>
+            <column name="order_state" value="EXECUTION" />
+            <column name="name" value="Second order" />
+            <column name="description" value="Second description" />
+            <column name="created_by" value="user" />
+            <column name="internal_id" value="Second internal id"/>
+        </insert>
+        <insert tableName="orders">
+            <column name="uuid" value="bb3be0c2-b94e-4e07-a9a3-f5379cd10d7f"/>
+            <column name="order_state" value="CLOSED" />
+            <column name="name" value="Third order" />
+            <column name="description" value="" />
+            <column name="created_by" value="user" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>

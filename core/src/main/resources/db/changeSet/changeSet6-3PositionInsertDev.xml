@@ -1,0 +1,59 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="6-3" author="czechp" context="development">
+        <insert tableName="positions">
+            <column name="uuid" value="285e638a-406e-43bb-9744-7bae8baeda31"/>
+            <column name="order_id" value="1"/>
+            <column name="element_id" value="1"/>
+            <column name="quantity" value="10"/>
+            <column name="position_unit" value="PCS"/>
+            <column name="position_status" value="NOT_ORDERED" />
+        </insert>
+        <insert tableName="positions">
+            <column name="uuid" value="22a87b2f-85d0-4e01-93b0-a4bb770dbe92"/>
+            <column name="order_id" value="1"/>
+            <column name="element_id" value="2"/>
+            <column name="quantity" value="20"/>
+            <column name="position_unit" value="METRES"/>
+            <column name="position_status" value="ORDERED" />
+        </insert>
+        <insert tableName="positions">
+            <column name="uuid" value="5934f375-8f8a-4353-b082-17ee3396aab0"/>
+            <column name="order_id" value="1"/>
+            <column name="element_id" value="3"/>
+            <column name="quantity" value="20"/>
+            <column name="position_unit" value="PACKAGE"/>
+            <column name="position_status" value="DELIVERED" />
+        </insert>
+
+
+        <insert tableName="positions">
+            <column name="uuid" value="285e638a-406e-43bb-9744-7bae8baeda32"/>
+            <column name="order_id" value="2"/>
+            <column name="element_id" value="1"/>
+            <column name="quantity" value="10"/>
+            <column name="position_unit" value="PCS"/>
+            <column name="position_status" value="NOT_ORDERED" />
+        </insert>
+        <insert tableName="positions">
+            <column name="uuid" value="22a87b2f-85d0-4e01-93b0-a4bb770dbe93"/>
+            <column name="order_id" value="2"/>
+            <column name="element_id" value="2"/>
+            <column name="quantity" value="20"/>
+            <column name="position_unit" value="METRES"/>
+            <column name="position_status" value="ORDERED" />
+        </insert>
+        <insert tableName="positions">
+            <column name="uuid" value="5934f375-8f8a-4353-b082-17ee3396aab1"/>
+            <column name="order_id" value="2"/>
+            <column name="element_id" value="3"/>
+            <column name="quantity" value="20"/>
+            <column name="position_unit" value="PACKAGE"/>
+            <column name="position_status" value="DELIVERED" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>

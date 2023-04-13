@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="3-1" author="czechp" context="development">
+        <insert tableName="categories">
+            <column name="name" value="First category"/>
+            <column name="uuid" value="65ffe655-86fd-4c4f-b321-88b4c73d35fd"/>
+        </insert>
+        <insert tableName="categories">
+            <column name="name" value="Second category"/>
+            <column name="uuid" value="69c1c3d0-a76d-4143-97bd-ada2afe2b3af"/>
+        </insert>
+        <insert tableName="categories">
+            <column name="name" value="Third category"/>
+            <column name="uuid" value="e0d582fd-a368-45ce-9a32-6da412a8c6e6"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

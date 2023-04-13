@@ -1,0 +1,32 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <include file="changeSet/changeSet1-0UserCreateTable.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet1-1UserInsertDev.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet1-2UserInsertTest.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet1-3UserAddColumnConfirmedByAdmin.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet1-4UserUpdateConfirmByAdminDev.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet1-5UserAddColumnRestorePassword.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet1-6UpdateRestorePasswordTokenTest.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet2-0ProviderCreateTable.xml" relativeToChangelogFile="true"/>
+    <include file="changeSet/changeSet2-1ProviderInsertDev.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet3-0CategoryCreateTable.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet3-1CategoryInsertDev.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet4-0ProducerCreateTable.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet4-1ProducerInsertDev.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet5-0ElementCreateTable.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet5-1ElementInsertDev.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet5-2AssociatedElementCreateTable.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet5-3AssociatedElementInsertDev.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-0OrderCreateTable.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-1OrderInsertDev.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-2PositionCreateTable.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-3PositionInsertDev.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-4PositionCreateView.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-5OrderCreateView.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-6PositionDetailsCreateView.xml" relativeToChangelogFile="true" />
+    <include file="changeSet/changeSet6-7OrderExtendDescriptionField.xml" relativeToChangelogFile="true" />
+
+</databaseChangeLog>

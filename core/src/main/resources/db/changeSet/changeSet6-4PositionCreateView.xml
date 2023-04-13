@@ -1,0 +1,34 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="6-4-1" author="pczech">
+        <preConditions>
+            <tableExists tableName="positions"/>
+            <tableExists tableName="elements"/>
+        </preConditions>
+        <createView viewName="positions_view" replaceIfExists="true">
+            select
+            p.id,
+            p.order_id,
+            p.quantity,
+            p.position_unit,
+            p.created_at,
+            p.updated_at,
+            p.position_status,
+            p.ordering_date,
+            p.delivering_date,
+            e.name,
+            e.producer,
+            e.category,
+            e.provider,
+            e.url,
+            e.description,
+            e.serial_number
+            from positions p left join elements e on p.element_id=e.id
+            order by e.producer asc, p.id asc
+        </createView>
+    </changeSet>
+
+</databaseChangeLog>

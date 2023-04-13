@@ -1,0 +1,15 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="5-2" author="czechp">
+        <createTable tableName="associated_elements">
+            <column name="element_id" type="bigint" >
+                <constraints foreignKeyName="fk_elements_associated_elements" references="elements(id)"/>
+            </column>
+            <column name="associated_element_id" type="bigint" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

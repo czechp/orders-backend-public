@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="2-1" author="czechp" context="development">
+        <insert tableName="providers">
+            <column name="name" value="First provider" />
+            <column name="uuid" value="9d94f258-648f-4189-8eab-a08a7d0899d1" />
+        </insert>
+        <insert tableName="providers">
+            <column name="name" value="Second provider" />
+            <column name="uuid" value="a7e0d2b0-1256-46f6-a5b3-543ed990d9b6" />
+        </insert>
+        <insert tableName="providers">
+            <column name="name" value="Third provider" />
+            <column name="uuid" value="c179a19a-0f21-46b9-ae32-e266f97a5d24" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
